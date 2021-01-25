@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.slide__container {
+  height: 100vh;
+  display: flex;
+  contain: content;
+  justify-content: center;
+  align-items: center;
+  background: #1d212b;
+}
+
+.img-slider .left {
+  /* flex: 5%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: white;
+  z-index: 2; */
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  bottom: 50%;
+  left: 5%;
+  cursor: pointer;
+}
+.img-slider .right {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  bottom: 50%;
+  right: 5%;
+  cursor: pointer;
+}
+
+.img-slider {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: 10px;
+  background: #1d212b;
+}
+
+.img-slider .slide {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+}
+
+.img-slider .slide img {
+  z-index: 1;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.img-slider .slide .info {
+  position: absolute;
+  top: 0;
+  padding: 15px 30px;
+}
+
+.img-slider .slide .info h2 {
+  color: #fff;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.img-slider .slide .info p {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  width: 60%;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+@media (max-width: 750px) {
+  .img-slider {
+    width: 600px;
+    height: 375px;
+  }
+
+  .img-slider .slide .info {
+    padding: 10px 22px;
+  }
+
+  .img-slider .slide .info h2 {
+    font-size: 25px;
+  }
+
+  .img-slider .slide .info p {
+    font-size: 14px;
+    width: 70%;
+  }
+}
